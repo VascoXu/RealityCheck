@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<div class="container ui text center aligned header" id="Title">
+    <h1>Reality Check</h1>
+    <!-- <a href="https://github.com/DrustZ/TextTestPP" target="_blank" id="aboutlink">Source Code</a>     -->
+</div>
+
+<br></br>
+
+<div id="main-sec" >
+    <div class="ui text container">
+        <div class="ui segment" id="Present">Loading...</div>
+        <textarea class="ui raised segment" id="Transcribe" spellcheck="false" autofocus></textarea>
+        <div class="ui fitted divider" style="border-color:white;"></div>
+        <div id="AlignBtn" class="ui stackable">
+            <span id="phraseCount" >Phrase Count </span>
+            <!-- <button class="ui tiny button" id="Redo" disabled="disabled">
+                <i class="undo icon"></i>Redo
+            </button> -->
+            <button class="ui green button" id="Next">Next</button>
+        </div>
+        <!-- <div>
+            <div class="right aligned column">
+                <div class="ui action mini">
+                    <button class="small ui blue button" id="Download">Download Log</button>
+                </div>
+            </div> 
+        </div> -->
+    </div>
+
+    <div class="ui container center aligned">
+        <div id="vis"></div>
+    </div>
+</div>
+{% endblock %}

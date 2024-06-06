@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
+        <meta charset="utf-8"/>
+        <meta content="initial-scale=1, width=device-width" name="viewport"/>
+
+        <!-- Source Code Pro -->
+        <link rel="stylesheet" type="text/css" href="source-code-pro.css">
+
+        <!-- https://vega.github.io/vega/ -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.0/vega-lite.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc6/vega-embed.js"></script>
+
+        <!-- StackEdit -->
+        <link rel="stylesheet" href="https://stackedit.io/style.css" />
+        
+        <!-- Semantic CSS -->
+        <link href="{{ url_for('static', filename='styles/semantic/dist/semantic.min.css') }}" rel="stylesheet">
+
+        <!-- App's own CSS -->
+        <link href="{{ url_for('static', filename='styles/main.css') }}" rel="stylesheet">
+
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+    	{% block body %}
+        {% endblock %}
+        <!-- http://jquery.com/ -->
+        <script src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
+
+        <!-- App's own Javascript -->
+        <script src="{{ url_for('static', filename='js/general.js') }}"></script>
+        
+        <!-- Semantic Javascript -->
+        <script src="{{ url_for('static', filename='styles/semantic/dist/semantic.min.js') }}"></script>
+
+        {% block scripts %}
+        {% endblock %}
+    </body>
+</html>
